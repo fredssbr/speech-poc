@@ -6,6 +6,15 @@ public class Transcript {
     private String id;
     private String status;
     private String text;
+    private String language_code;
+
+    public String getLanguage_code() {
+        return language_code;
+    }
+
+    public void setLanguage_code(String language_code) {
+        this.language_code = language_code;
+    }
 
     public String getStatus() {
         return status;

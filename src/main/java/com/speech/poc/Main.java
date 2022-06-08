@@ -15,13 +15,13 @@ public class Main {
 	// write your code here
         Transcript requestBody = new Transcript();
         requestBody.setAudio_url(Constants.audioUrl);
+        requestBody.setLanguage_code(Constants.languageCode);
         Gson gson = new Gson();
         String stringPayload = gson.toJson(requestBody);
 
         HttpRequest httpPostRequest = HttpRequest.newBuilder()
                 .uri(new URI(Constants.uri))
                 .header("Authorization", Constants.apiKey)
-                .header("language_code", Constants.languageCode)
                 .POST(HttpRequest.BodyPublishers.ofString(stringPayload))
                 .build();
 
